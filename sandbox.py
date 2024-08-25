@@ -32,7 +32,7 @@ def check_system_metrics():
     """Check system metrics like CPU cores and memory to detect virtual environments."""
     if psutil.virtual_memory().total < 2 * 1024 * 1024 * 1024:  # Less than 2GB RAM
         return True
-    if psutil.cpu_count() <= 2:  # Less than 2 CPU cores
+    if psutil.cpu_count() <= 2:  
         return True
     return False
 
